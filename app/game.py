@@ -8,11 +8,7 @@ GUI_PROMPT_MESSAGE = "Please choose an option from the dropdown:"
 WIN_MESSAGE = "Congratulations, you won!"
 LOSE_MESSAGE = "Oh, the computer won. It's ok."
 TIE_MESSAGE = "Oh, it's a tie."
-comCount = 0
-userCount = 0
-tieCount = 0
-playAgain = True
-playAgainInput = ""
+
 def random_choice(options=["rock", "paper", "scissors"]):
     return random.choice(options)
 
@@ -66,8 +62,9 @@ if __name__ == "__main__":
     print("-------------------")
     print("Launching the game...")
     print("-------------------")
-while playAgain != False: 
+
     options = ["rock", "paper", "scissors"]
+
     user_choice = input("Please choose either 'rock', 'paper', or 'scissors': ")
 
     if user_choice in options:
@@ -85,22 +82,9 @@ while playAgain != False:
     if winning_choice:
         if winning_choice == user_choice:
             print(WIN_MESSAGE)
-            userCount += 1
         elif winning_choice == computer_choice:
             print(LOSE_MESSAGE)
-            comCount += 1
     else:
         print(TIE_MESSAGE)
-        tieCount += 1
 
-    playAgainInput = input("Would you like to play again? (y/n) ")
-    if playAgainInput == "y":
-        playAgain = True
-    elif playAgainInput == "n" :
-        playAgain = False
-    else:
-        print("Unknown input, ending game")
-    print("User Wins: " + str(userCount))
-    print("Computer Wins: " + str(comCount))
-    print("Tied Games: " + str(tieCount))
-print("Thanks for playing. Please play again!")
+    print("Thanks for playing. Please play again!")
