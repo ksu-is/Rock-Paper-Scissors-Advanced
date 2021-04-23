@@ -15,6 +15,7 @@ my_select.insert(1, "rock")
 my_select.insert(2, "paper")
 my_select.insert(3, "scissors")
 
+
 def handle_button_click():
 
     user_choice = my_select.get(my_select.curselection())
