@@ -10,11 +10,7 @@
 
 TODO:
 
-[] implement pictures to tkinter game (rock, paper scissors, etc)
-
 [x] implement score tracker (text counter)- DONE
-
-[] implement ability to play versus two computers (comparison between 3 choices)
 
 [x] implement best of 3/5 (series play that keeps running after each "roll", score tracker that ends one someone reaches 2/3)- DONE
   
